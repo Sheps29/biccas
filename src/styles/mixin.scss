@@ -31,8 +31,22 @@
 }
 
 @mixin btn {
+  @include s;
   padding: 20px 30px;
   border-radius: 40px;
+  border: none;
   color: $white;
   background-color: $green;
+}
+
+@mixin h2 {
+  @include xxl;
+
+  @media (max-width: 920px) {
+    @include xl;
+  }
+
+  @media (max-width: 480px) {
+    @include l;
+  }
 }

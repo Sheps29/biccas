@@ -10,7 +10,7 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0 130px;
 
-  @media (max-width: 960px) {
+  @media (max-width: 920px) {
     margin: 0 50px;
   }
 
@@ -21,26 +21,14 @@ body {
 
 section {
   margin: 130px 0;
-}
 
-h1 {
-  @include xxxl;
-}
+  @media (max-width: 920px) {
+    margin: 80px 0;
+  }
 
-h2 {
-  @include xxl;
-}
-
-h3 {
-  @include xl;
-}
-
-h4 {
-  @include l;
-}
-
-h5 {
-  @include m;
+  @media (max-width: 480px) {
+    margin: 40px 0;
+  }
 }
 
 .header {
@@ -61,7 +49,7 @@ h5 {
     align-items: center;
     gap: 35px;
 
-    @media (max-width: 960px) {
+    @media (max-width: 920px) {
       display: none;
     }
 
@@ -90,7 +78,7 @@ h5 {
   .burger {
     display: none;
 
-    @media (max-width: 960px) {
+    @media (max-width: 920px) {
       display: block;
       width: 30px;
       height: 30px;
@@ -104,6 +92,11 @@ h5 {
 .promo {
   display: flex;
   gap: 35px;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 
   .info {
     flex: 1;
@@ -111,19 +104,54 @@ h5 {
     h1 {
       @include xxxl;
       margin-bottom: 30px;
+
+      @media (max-width: 920px) {
+        @include xxl;
+      }
+
+      @media (max-width: 480px) {
+        @include xl;
+      }
+    }
+
+    .line {
+      width: 100%;
     }
 
     p {
       @include s;
       margin: 50px 0;
-      max-width: 461px;
+    }
+
+    div {
+      display: flex;
+      gap: 40px;
+
+      .btn {
+        @include btn;
+      }
+
+      a {
+        @include s;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $black;
+
+        img {
+          margin-right: 9px;
+        }
+      }
     }
   }
 
   picture {
     margin-right: -110px;
     max-width: 702px;
-    flex: 1;
+
+    @media (max-width: 920px) {
+      margin-right: 0;
+    }
 
     img {
       width: 100%;
@@ -131,5 +159,422 @@ h5 {
       height: auto;
     }
 
+  }
+}
+
+.collabs {
+
+  h3 {
+    @include xl;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media (max-width: 480px) {
+      @include l;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    list-style: none;
+
+    @media (max-width: 480px) {
+      gap: 20px;
+    }
+
+    img {
+      filter: grayscale(100%);
+
+      @media (max-width: 480px) {
+        width: 100px;
+      }
+    }
+  }
+}
+
+.support {
+  padding: 60px 130px;
+  margin: 0 -130px;
+  display: flex;
+  gap: 27px;
+  background-color: $grey-100;
+
+  @media (max-width: 920px) {
+    padding: 60px 50px;
+    margin: 0 -50px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 60px 20px;
+    margin: 0 -20px;
+  }
+
+  .about {
+    max-width: 644px;
+
+    h2 {
+      @include h2;
+    }
+
+    p {
+      @include xs;
+      margin: 30px 0 73px;
+      color: $grey;
+      line-height: 30px;
+    }
+
+    .rating {
+      display: flex;
+      gap: 80px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        span {
+          @include s
+        }
+
+        .num {
+          font-weight: 600;
+        }
+      }
+
+      div > span:last-child {
+        color: $grey;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style-type: none;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 21px;
+
+      picture {
+        padding: 15px;
+        background-color: $white;
+      }
+
+      div {
+
+        h5 {
+          @include m;
+          margin-bottom: 10px;
+        }
+
+        p {
+          @include s;
+          color: $grey;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 74px;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 920px) {
+      flex-direction: column;
+    }
+
+    h2 {
+      @include h2;
+      max-width: 331px;
+    }
+
+    p {
+      @include s;
+      max-width: 574px;
+      color: $grey;
+      line-height: 30px;
+    }
+
+    .btn {
+      @include btn;
+      border-radius: 70px;
+    }
+  }
+
+  .feature {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 44px;
+
+    div {
+      flex: 1;
+
+      picture {       
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          min-width: 180px;
+        }
+      }
+
+      h4 {
+        @include l;
+        margin: 30px 0 20px;
+      }
+
+      p {
+        @include s;
+        color: $grey;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+.benifit {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  div {
+    h2 {
+      @include h2;
+      margin-bottom: 50px;
+      max-width: 430px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      list-style-type: none;
+
+      li {
+        @include s;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+
+        img {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  picture {
+    position: relative;
+    
+    .benifit-img {
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .income {
+      position: absolute;
+      right: -70px;
+      top: 120px;
+
+      @media (max-width: 920px) {
+        right: -40px;
+      }
+
+      @media (max-width: 480px) {
+        right: -10px;
+      }
+    }
+
+    .amanda {
+      position: absolute;
+      left: -64px;
+      top: 36px;
+    }
+
+    .money {
+      position: absolute;
+      left: -84px;
+      bottom: -14px;
+    }
+
+    .photo {
+      position: absolute;
+      left: -60px;
+      top: 305px;
+    }
+  }
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  gap: 67px;
+
+  .choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    h2 {
+      @include h2;
+      max-width: 492px;
+      text-align: center;
+    }
+
+    p {
+      @include s;
+      color: $grey;
+    }
+
+    .box {
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 340px;
+      background-color: $grey-100;
+
+      button {
+        @include s;
+        border: none;
+      }
+
+      button:first-of-type {
+        padding: 20px 30px;
+        background-color: $grey-100
+      }
+
+      button:last-of-type {
+        @include btn;
+        border-radius: 10px;
+        margin: 7px 7px 7px 0;
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 29px;
+    padding: 22px 0 18px;
+
+    .card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      min-width: 200px;
+      border-radius: 20px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      padding: 40px 20px 25px;
+
+      h4 {
+        @include l;
+      }
+
+      p {
+        @include s;
+        line-height: 27px;
+        padding: 10px 40px;
+        text-align: center;
+        color: $grey;
+      }
+
+      .backs {
+        @include s;
+        color: $grey;
+        text-align: center;
+        padding-right: 45px;
+        margin-bottom: -20px;
+      }
+
+      .num {
+        @include xxl;
+        text-align: center;
+      }
+
+      div {
+        border-radius: 10px;
+        background-color: $grey-100;
+        width: 100%;
+        
+
+        ul {
+          padding: 25px 30px;
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+          gap: 22px;
+
+          li {
+            display: flex;
+            align-items: center;
+
+            img {
+              margin-right: 10px;
+            }
+          }
+
+          .btn {
+            @include btn;
+            border-radius: 20px;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .card:first-of-type, .card:last-of-type {
+      .btn {
+        background-color: $white;
+        color: $green;
+      }
+    }
+
+    .card2 {
+      background-color: $green;
+      margin: -22px 0 -18px;
+
+      h4, p, span, .backs {
+        color: $white;
+      }
+
+      .save {
+        @include xxs;
+        padding: 5px 10px;
+        max-width: 130px;
+        background-color: $green-100;
+        line-height: 30px;
+        border-radius: 10px;
+      }
+
+      div {
+        background-color: $white;
+      }
+    }
   }
 }
