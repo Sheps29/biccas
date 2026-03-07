@@ -389,7 +389,7 @@ section {
 .benifit picture {
   position: relative;
 }
-.benifit picture .benifit-img {
+.benifit picture .ben {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -573,4 +573,128 @@ section {
 }
 .plan .info .card2 div {
   background-color: #FFFFFF;
+}
+
+.people {
+  padding: 130px;
+  margin: 0 -130px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  background-color: #161C28;
+}
+@media (max-width: 920px) {
+  .people {
+    padding: 60px 50px;
+    margin: 0 -50px;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .people {
+    padding: 60px 20px;
+    margin: 0 -20px;
+  }
+}
+.people .saying {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 40%;
+}
+@media (max-width: 920px) {
+  .people .saying {
+    width: 100%;
+  }
+}
+.people .saying h2 {
+  font-size: 50px;
+}
+@media (max-width: 920px) {
+  .people .saying h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .people .saying h2 {
+    font-size: 30px;
+  }
+}
+.people .saying h2 {
+  color: #FFFFFF;
+}
+.people .saying p, .people .saying span {
+  font-size: 18px;
+  color: #A6A6A6;
+}
+.people .saying p:first-of-type {
+  margin-top: -20px;
+}
+.people .saying img {
+  width: 45px;
+  height: 38px;
+}
+.people .saying div {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.people .saying div img {
+  width: 66px;
+  height: 66px;
+}
+.people .form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: #222938;
+  padding: 40px 86px 66px;
+  width: 35%;
+  border-radius: 20px;
+  color: #FFFFFF;
+}
+@media (max-width: 920px) {
+  .people .form {
+    padding: 30px 40px;
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  .people .form {
+    padding: 20px;
+  }
+}
+.people .form img {
+  width: 72px;
+  height: 86px;
+}
+.people .form h4 {
+  font-size: 30px;
+}
+.people .form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.people .form form input, .people .form form textarea {
+  border-radius: 10px;
+  padding: 17px 20px;
+}
+.people .form form .btn {
+  font-size: 18px;
+  padding: 20px 30px;
+  border-radius: 40px;
+  border: none;
+  color: #FFFFFF;
+  background-color: #54BD95;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.people .form span {
+  font-size: 14px;
+  margin-left: auto;
 }/*# sourceMappingURL=style.css.map */
